@@ -1,0 +1,9 @@
+<h1>Flashcard Sets</h1>
+<ul>
+  {% for set in sets %}
+    <li>
+      <a href="{% url 'study_flashcard_set' set.id %}">{{ set.title }}</a>
+      - {{ set.description }}
+    </li>
+  {% endfor %}
+</ul>
